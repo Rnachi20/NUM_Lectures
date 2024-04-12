@@ -1,0 +1,120 @@
+lab11
+1
+SELECT CONCAT (SUBSTRING(s.lName,1,1),'.',s.fName,' ' ,MONTH (r.dateJoined),' ','сарын ',DAY(r.dateJoined),'-нд ',b.city,' салбарт', ' ',
+SUBSTRING(c.lName,1,1),'.',c.fName,'-тaй ажилласан байна.') AS Бүртгэлийн_хүснэгт
+FROM registration r, staff s, branch b, client1 c
+WHERE b.branchNo=r.branchNo AND r.clientNo=c.clientNo AND s.staffNo=r.staffNo; 
+
+2
+CREATE TABLE staffInfo AS
+SELECT CONCAT(b.street,' ', b.city) AS bAddress, CONCAT(s.lName,' ', s.fName)AS fullName, s.staffNo, s.position1,
+COUNT(p.propertyNo) AS propCount, COUNT( r.clientNo) AS clientCount
+FROM staff s  
+LEFT JOIN branch b ON s.branchNo=b.branchNo 
+LEFT JOIN propertyforrent p ON p.staffNo=s.staffNo 
+LEFT JOIN registration r ON r.staffNo=s.staffNo
+GROUP BY s.staffNo;
+
+3
+SELECT staffNo, COUNT(propertyNo) AS too, 
+IF(COUNT(propertyNo)<50, "heviin", "ih") AS ajillahAchaalal
+FROM propertyforrent
+GROUP BY staffNo;
+
+4
+UPDATE PropertyForRent
+SET rent=500, staffno="SA9"
+WHERE ownerNo IN (SELECT ownerno
+		  FROM PrivateOwner
+		  WHERE fname="Tony" AND lname="Shaw");
+		  
+5
+UPDATE PropertyForRent
+SET rent=rent+rent*0.15
+WHERE branchno="B003";
+
+6
+UPDATE registration 
+SET dateJoined=DATE_ADD(dateJoined, INTERVAL 1 MONTH)
+WHERE dateJoined LIKE '%-04-%';
+
+7
+CREATE TABLE noots AS
+SELECT*
+FROM PropertyForRent;
+ 
+DELETE 
+FROM noots
+WHERE staffNo="";
+
+8
+DELETE 
+FROM noots
+WHERE street="16 Argyll St" AND type1="House";
+
+1
+SELECT CONCAT(g.guestName,' ',h.hotelName,' ','зочид буудлын',' ',r.price,' ','үнэтэй "VIP" өрөөнд байрлажээ') AS Зочид_буудлын_захиалгын_мэдээлэл
+FROM Hotel h, Guest g, Room r, Booking b
+WHERE  b.roomNo=r.roomNo AND h.hotelNo=b.hotelNo AND g.guestNo=b.guestNo;
+
+2
+SELECT r.* 
+FROM room r LEFT JOIN booking b ON r.roomNo=b.roomNo 
+WHERE b.dateFrom IS NULL AND b.dateTo IS NULL OR NOW()<b.dateFrom AND NOW()<b.dateTo 
+ORDER BY r.price ASC 
+
+SELECT RoomNo, HotelNo, bed, price
+FROM room
+WHERE price =(SELECT MIN(price) 
+              FROM room) AND roomNo IN(SELECT roomNo 
+                                       FROM booking 
+                                       WHERE (SELECT NOW()) NOT BETWEEN datefrom AND dateTo);
+                                      
+3
+SELECT r.*, COUNT(b.dateFrom) AS zahialga_awsan_too
+FROM room r LEFT JOIN booking b ON r.roomNo=b.roomNo 
+GROUP BY r.roomNo 
+HAVING COUNT(b.dateFrom)<2
+ORDER BY r.price ASC;
+
+4
+SELECT g.*, b.dateFrom, b.dateTo
+FROM guest g LEFT JOIN  booking b ON b.guestNo=g.guestNo
+WHERE  NOW()>b.dateTo AND 
+NOW()>b.dateFrom AND b.dateTo>DATE_ADD(NOW(), INTERVAL -3 MONTH) AND b.dateFrom>DATE_ADD(NOW(), INTERVAL -3 MONTH);
+
+5
+SELECT b.hotelNo,g.guestNo,g.guestName,g.phonenumber
+FROM booking b,guest g
+WHERE g.guestNo=b.guestNo
+GROUP BY b.hotelNo
+ORDER BY COUNT(b.guestNo) DESC;
+
+6
+CREATE TABLE noots AS
+SELECT *
+FROM hotel;
+
+7
+CREATE TABLE  HotelInformation AS
+SELECT h.hotelNo, h.hotelName, COUNT(r.roomNo) AS RoomCount, MAX(r.price) AS MaxPrice, MIN(r.price) AS MinPrice, AVG(r.price) AS AvgPrice, h.city 
+FROM hotel h 
+LEFT JOIN room r ON h.hotelNo=r.hotelNo
+GROUP BY h.hotelName 
+
+CREATE TABLE HotelInformation AS
+SELECT h.hotelno,h.hotelname,COUNT(r.roomno) AS RoomCount,MAX(r.price),MIN(r.price),AVG(r.price),h.city
+FROM hotel h,room r
+WHERE h.hotelno=r.hotelno
+GROUP BY r.hotelno;
+
+8
+UPDATE room r
+LEFT JOIN hotel h ON r.hotelNo=h.hotelNo
+SET r.price=r.price*1.002
+WHERE h.hotelName="Holiday";
+
+UPDATE room r,hotel h
+SET r.price=r.price+r.price*0.2
+WHERE r.hotelno=h.hotelno AND h.hotelname="Holiday";
+
