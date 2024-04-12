@@ -1,0 +1,11 @@
+
+import acm.program.*;
+
+public class Robotic extends GraphicsProgram {
+	private static int HEAD_WIDTH=150;
+	private static int HEAD_HEIGHT=200;
+	public void run() {		
+		
+	}
+
+}

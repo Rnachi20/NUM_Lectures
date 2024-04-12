@@ -1,0 +1,19 @@
+
+import acm.program.*;
+import acm.graphics.*;
+
+public class Robotic extends GraphicsProgram {
+	private static int HEAD_WIDTH=150;
+	private static int HEAD_HEIGHT=200;
+	public void run() {		
+		println("Robot hiih programm");
+		int h=getHeight();
+		int w=getWidth();
+		
+	}
+	
+	public static void main(String[] arg) {
+		new Robotic().start();
+	}
+
+}

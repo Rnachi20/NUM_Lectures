@@ -1,0 +1,33 @@
+
+
+import acm.program.*;
+
+public class Sort3Num extends ConsoleProgram {
+	public void run() {
+		println("This is number decrease programm.");
+		int a=readInt("Enter a: ");
+		int b=readInt("Enter b: ");
+		int c=readInt("Enter c: ");
+			if (a<b){
+				if (b<c){
+				println(c+b+a);
+				}
+				else if (a<c){ 
+				     println(b+c+a);
+				     }else{
+				     println(b+a+c); 
+				     }
+			}else if (a<c) {
+				println(c+a+b);
+				}else if(b<c){
+					println(a+c+b);
+					}else {
+						println(a+b+c);
+					}
+	}
+	
+	public static void main(String[] arg) {
+		new Sort3Num().start();
+	}
+	
+}

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Emilys+Candy&family=Figtree:wght@300&family=Lobster&family=Lobster+Two&family=Mulish:wght@300&family=Noto+Sans+Mono:wght@300&family=Passions+Conflict&family=Quicksand&family=Roboto:wght@300&display=swap");
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 50px;
+}
+
+.box {
+    
+    background-color: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 2px, 4px, 5px rgba(0, 0, 0, 0.3);
+    transform: translate(400%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400);
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size: 23px;
+    font-family: Mulish, sans-serif;
+}
+
+.info{
+    width: 10%;
+    height: 80%;
+    border-color: azure;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}

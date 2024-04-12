@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+D:\Urana\.metadata\.plugins\org.eclipse.jdt.core
+2467800257.index
+1865797976.index
+316003487.index
+1375948145.index

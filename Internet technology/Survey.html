@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		 HTML and CSS Survey Form
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #05c46b;
+			font-family: Verdana;
+            text-align: left;
+		}
+
+        h1{
+            text-align: center;
+        }
+        
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 20spx;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+}
+        input[type=number], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+}
+	</style>
+</head>
+
+<body>
+	<h1>Санал асуулгын маягт</h1>
+
+	<!--  Form үүсгэх -->
+	<form id="form">
+        <label for="name"> Нэр: </label><br>
+        <input type="text" id="name" placeholder="Enter your name"><br>
+
+        <label for="mail"> Email: </label><br>
+        <input type="text" id="mail" placeholder="Enter your email"><br>
+
+        <label for="age"> Нас: </label> <br>
+        <input type="number" id="age" placeholder="Enter your age"><br>
+
+        <label> Өөрийг чинь аль нь тодорхойлох вэ? </label> <br>
+            <select>
+                <option>Оюутан</option>
+                <option>Сурагч</option>
+                <option>Багш</option>
+            </select><br>
+
+        <label>Та HTML мэдэх үү?</label><br>
+        <label>
+            <input type="radio" name="html" value="Тийм">
+            Тийм
+        </label><br>
+        <label>
+            <input type="radio" name="html" value="Үгүй">
+            Үгүй
+        </label><br>
+        <label>
+            <input type="radio" name="html" value="Магадгүй">
+            Магадгүй
+        </label><br>
+
+        <label>Та ямар программчлалын хэл эсвэл фрэймворк мэдэх вэ?
+            <br>(Шаардлагатай гэж үзвэл олон сонголт хийж болно)
+        </label><br>
+         
+        <label>
+            <input type="checkbox">
+            С 
+        </label><br>
+        <label>
+            <input type="checkbox">
+            C++
+        </label><br>
+        <label>
+            <input type="checkbox">
+            С#
+        </label><br>
+        <label>
+            <input type="checkbox">
+            Java
+        </label><br>
+        <label>
+            <input type="checkbox">
+            Python
+        </label><br>
+        <label>
+            <input type="checkbox">
+            Javascript
+        </label><br>
+        <label>Нэмэлт тайлбар байна уу?</label><br>
+        <input type="text">
+        <button type="submit"> Илгээх </button>
+	</form>
+</body>
+
+</html>

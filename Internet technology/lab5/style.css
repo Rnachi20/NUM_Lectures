@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Lobster&family=Noto+Sans+Mono:wght@300&family=Passions+Conflict&display=swap');
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: antiquewhite;
+}
+.btn{
+    background-color: #1a6fEC;
+    border-radius: 20px;
+    width: 204px;
+    height: 54spx;
+    padding: 2px;
+}
+
+.b0{
+    background-color: #1A6fEC;
+    width: 200px;
+    height: 50px;
+    color:aliceblue;
+    font-weight: bolder;
+    border: dashed 2px #fff;
+    border-radius: 20px;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.5);
+    font-family: 'Noto Sans Mono';
+    text-shadow: -1px 1px 1px #EC1ABC;
+}
+
+.flower{
+    border-radius: 50%;
+    margin-left: 8%;
+    box-shadow: 5px 5px 20px black ;
+
+}
+
+.dugui{
+    background: url(back.jpg) left bottom no-repeat;
+    padding: 10px; 
+}
+
+.img{
+    border-radius: 50%;
+    margin-left: 20%;
+}
+.line{
+    padding: 10px;
+}
+#grad1{
+    width: 150px;
+    height: 100px;
+    background-color: blue; 
+    background-image: linear-gradient(blue, lightblue);
+}
+#grad2{
+    width: 150px;
+    height: 100px;
+    background-image: radial-gradient(blue, #2B85DC, lightblue);
+    
+}
+#grad3{
+    width: 150px;
+    height: 100px;
+    background-image: repeating-linear-gradient(blue, #2B85DC 10%, lightblue 15%);
+}
+#grad4{
+    width: 150px;
+    height: 100px;
+    background-image: repeating-radial-gradient(blue, #2B85DC 10%, lightblue 15%);
+}
+.bck{
+    background: url(bck.jpg) left bottom no-repeat;
+    padding: 10px;
+    
+}
+.b1{
+    background-color: #ecbb1a;
+    width: 200px;
+    height: 70px;
+    color:black;
+    font-weight: bolder;
+    border: solid 3px #fff;
+    border-radius: 20px;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.5);
+}
+.b2{
+    background-color: #B922C9;
+    width: 200px;
+    height: 70px;
+    color: whitesmoke;
+    font-weight: bolder;
+    border: solid 3px black;
+    border-radius: 20px;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.5);
+}

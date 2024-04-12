@@ -1,0 +1,91 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.home { 
+    border-bottom: 1px solid grey;
+    padding: 15px;
+    display: flex ;
+    flex-direction: column;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row ;
+    border-top: 1px solid grey;
+}
+
+body {
+    background-color: #FDF9F8;
+    width: 60%;
+    margin: auto;
+}
+
+h1 {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 250%;
+    color: #535050;
+    letter-spacing: 4px;
+    line-height: 10pt;
+}
+
+h4{
+    border-top: 10%;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size:100%;
+    color: #535050;
+    
+}
+
+h5{
+    border-top: 10%;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size:100%;
+    color: #535050;
+    text-align: justify;
+}
+
+.pro{
+    width: 18%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.apple{
+    border-top: 1px solid #535050;
+    margin-left: 20%;
+}
+
+tr{
+    border-top:1px solid #535050;
+}
+
+.pro h4{
+    margin-top: 2%;
+    font-family: 'Times New Roman', Times, serif ;
+}
+.exp{
+    width: 33%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.button{
+    background-color: #535050;
+}
+
+.date{
+    display: flex;
+    justify-content: flex-end;
+}
