@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 01:36:37 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDE6MDA6MjEgUE07Mjg1Mg=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTA7MDE6MzY6MzcgUE07MjsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, n" type="Integer" array="False" size=""/>
+            <for variable="n" start="10" end="99" direction="inc" step="1">
+                <assign variable="a" expression="n%10"/>
+                <assign variable="b" expression="n/10"/>
+                <if expression="a==b">
+                    <then>
+                        <output expression="n" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-31 02:13:22 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDE6MjM6MTAgUE07Mjg1Ng=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDI6MTM6MjIgUE07MzsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, s, n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="s" expression="s+a[i]*a[n-i-1]"/>
+            </for>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

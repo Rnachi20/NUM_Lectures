@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-21 10:55:51 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yMTsxMDo1Mzo0MCBBTTszMDkx"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yMTsxMDo1NTo1MSBBTTsxOzMyMDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str, hah" type="String" array="False" size=""/>
+            <declare name="a, i, s" type="Integer" array="False" size=""/>
+            <input variable="str"/>
+            <input variable="hah"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="len(str) - 1" direction="inc" step="1">
+                <if expression="char(str, i) == hah">
+                    <then>
+                        <assign variable="s" expression="s + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

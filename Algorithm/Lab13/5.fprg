@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 11:59:13 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMToxMzo1NSBBTTszMDk3"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMTo1OToxMyBBTTsyOzMyMTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="on, sar, udur, garag, leap, i" type="Integer" array="False" size=""/>
+            <assign variable="garag" expression="5"/>
+            <input variable="on"/>
+            <input variable="sar"/>
+            <input variable="udur"/>
+            <assign variable="garag" expression="garag + on - 1"/>
+            <assign variable="leap" expression="(on - 1)/4"/>
+            <assign variable="garag" expression="garag + leap"/>
+            <for variable="i" start="0" end="sar-1" direction="inc" step="1">
+                <assign variable="garag" expression="garag + SAR(on, i)"/>
+            </for>
+            <assign variable="garag" expression="garag + udur"/>
+            <if expression="on &gt; 1911">
+                <then>
+                    <assign variable="garag" expression="(garag + 1) % 7"/>
+                </then>
+                <else>
+                    <assign variable="garag" expression="garag % 7"/>
+                </else>
+            </if>
+            <output expression="ymar(garag) &amp; &quot; &#1075;&#1072;&#1088;&#1072;&#1075; &#1073;&#1072;&#1081;&#1085;&#1072;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="SAR" type="Integer" variable="too">
+        <parameters>
+            <parameter name="on" type="Integer" array="False"/>
+            <parameter name="sar" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="too" type="Integer" array="False" size=""/>
+            <if expression="sar == 1 ||&#13;&#10;sar == 3 ||&#13;&#10;sar == 5 ||&#13;&#10;sar == 7 ||&#13;&#10;sar == 8 ||&#13;&#10;sar == 10">
+                <then>
+                    <assign variable="too" expression="31"/>
+                </then>
+                <else>
+                    <if expression="sar == 2">
+                        <then>
+                            <if expression="on % 4 == 0">
+                                <then>
+                                    <assign variable="too" expression="29"/>
+                                </then>
+                                <else>
+                                    <assign variable="too" expression="28"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="too" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="sar == 0">
+                <then>
+                    <assign variable="too" expression="0"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="ymar" type="String" variable="taa">
+        <parameters>
+            <parameter name="garag" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="taa" type="String" array="False" size=""/>
+            <if expression="garag == 0">
+                <then>
+                    <assign variable="taa" expression="&quot;&#1053;&#1103;&#1084;&quot;"/>
+                </then>
+                <else>
+                    <if expression="garag == 1">
+                        <then>
+                            <assign variable="taa" expression="&quot;&#1044;&#1072;&#1074;&#1072;&#1072;&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="garag == 2">
+                                <then>
+                                    <assign variable="taa" expression="&quot;&#1052;&#1103;&#1075;&#1084;&#1072;&#1088;&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="garag == 3">
+                                        <then>
+                                            <assign variable="taa" expression="&quot;&#1051;&#1093;&#1072;&#1075;&#1074;&#1072;&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="garag == 4">
+                                                <then>
+                                                    <assign variable="taa" expression="&quot;&#1055;&#1199;&#1088;&#1101;&#1074;&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="garag == 5">
+                                                        <then>
+                                                            <assign variable="taa" expression="&quot;&#1041;&#1072;&#1072;&#1089;&#1072;&#1085;&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="garag == 6">
+                                                                <then>
+                                                                    <assign variable="taa" expression="&quot;&#1041;&#1103;&#1084;&#1073;&#1072;&quot;"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

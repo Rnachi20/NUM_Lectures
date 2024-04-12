@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 12:03:46 PM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMTo1OToyOSBBTTszMTA4"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMTo1OTozMSBBTTsxO3N0dWRlbnQ7REVTS1RPUC1JSUQxOU1ROzIwMjItMDUtMDU7MTE6MTM6NTUgQU07NS5mcHJnOzY5NTQ="/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMjowMzo0NiBQTTsxOzMyMjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <for variable="a" start="1" end="n/3" direction="inc" step="1">
+                <for variable="b" start="a+1" end=" a + (n-a)/2" direction="inc" step="1">
+                    <assign variable="c" expression="n - a - b"/>
+                    <if expression="c &gt; a &amp;&amp; c &gt; b">
+                        <then>
+                            <output expression="a &amp; &quot; &quot; &amp; b &amp; &quot; &quot; &amp; c" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

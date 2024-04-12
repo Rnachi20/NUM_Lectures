@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-12 01:22:14 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMTI7MDE6MTc6NDIgUE07Mjg3MQ=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMTI7MDE6MjI6MTQgUE07MjsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <if expression="a&gt;=40">
+                <then>
+                    <if expression="a&gt;=60">
+                        <then>
+                            <output expression="&quot;hugshin&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;hijeel&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="a&gt;=18">
+                        <then>
+                            <output expression="&quot;zaluu&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;huuhed&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-31 01:22:42 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDE6MjE6MTIgUE07Mjg1Ng=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDE6MjE6MjUgUE07MTtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjIyOjUzIEFNOzguMy5mcHJnOzY4MDc="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDE6MjI6NDIgUE07MTsyOTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="100"/>
+            <declare name="i, s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="99" direction="inc" step="1">
+                <assign variable="a[i]" expression="random ( 1000 )"/>
+                <assign variable="s" expression="s + a[i]"/>
+            </for>
+            <output expression="s/100" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

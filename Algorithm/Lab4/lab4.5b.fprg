@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-03 08:47:33 AM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDg6MzU6MTggQU07Mjg1OA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDg6Mzc6MTggQU07MTtVcmFuYTtERVNLVE9QLUFHUUk2TlY7MjAyMi0wOS0yODswODozOTo1MyBBTTtsYWI0LjVhLmZwcmc7Njk5MA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDg6NDc6MzMgQU07MjsyOTY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="i, j, k, s, x" type="Real" array="False" size=""/>
+            <output expression="&quot;Zergiin too hemjeeg orullna uu&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Zereg devshigdeh toog oruulna uu&quot;" newline="True"/>
+            <input variable="x"/>
+            <assign variable="s" expression="0"/>
+            <assign variable="j" expression="1"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="j" expression="j * x / i"/>
+                <assign variable="s" expression="s + j"/>
+            </for>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

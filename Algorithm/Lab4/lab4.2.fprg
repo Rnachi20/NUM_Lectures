@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-28 08:03:37 AM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMjY7MDE6NDY6NDYgUE07Mjg4Mg=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMjg7MDg6MDM6MzcgQU07NjsyOTgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, o, d, a, m, i, j" type="Integer" array="False" size=""/>
+            <input variable="o"/>
+            <input variable="d"/>
+            <input variable="a"/>
+            <input variable="n"/>
+            <assign variable="m" expression="o*d*a"/>
+            <if expression="m&gt;n">
+                <then>
+                    <assign variable="i" expression="n/(d*a)"/>
+                    <assign variable="n" expression="n-i*d*a"/>
+                    <if expression="n==0">
+                        <then>
+                            <output expression="i&amp;&quot;-&#1088; &#1086;&#1088;&#1094;&quot;" newline="True"/>
+                            <output expression="d&amp;&quot;-&#1088; &#1076;&#1072;&#1074;&#1093;&#1072;&#1088;&quot;" newline="True"/>
+                            <output expression="a&amp;&quot;-&#1088; &#1072;&#1081;&#1083;&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="i" expression="i+1"/>
+                            <assign variable="j" expression="n/a"/>
+                            <assign variable="n" expression="n-j*a"/>
+                            <if expression="n==0">
+                                <then>
+                                    <output expression="i&amp;&quot;-&#1088; &#1086;&#1088;&#1094;&quot;" newline="True"/>
+                                    <output expression="j&amp;&quot;-&#1088; &#1076;&#1072;&#1074;&#1093;&#1072;&#1088;&quot;" newline="True"/>
+                                    <output expression="a&amp;&quot;-&#1088; &#1072;&#1081;&#1083;&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="i&amp;&quot;-&#1088; &#1086;&#1088;&#1094;&quot;" newline="True"/>
+                                    <output expression="j+1&amp;&quot;-&#1088; &#1076;&#1072;&#1074;&#1093;&#1072;&#1088;&quot;" newline="True"/>
+                                    <output expression="n&amp;&quot;-&#1088; &#1072;&#1081;&#1083;&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Iim toot baihgui baina&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

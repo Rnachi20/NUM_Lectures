@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-24 01:28:53 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMjI7MTE6MjQ6MTQgQU07Mjg0Nw=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMjQ7MDE6Mjg6NTMgUE07NTsyOTgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, a, b, q, w, k" type="Integer" array="False" size=""/>
+            <input variable="m"/>
+            <for variable="a" start="1" end="m" direction="inc" step="1">
+                <assign variable="q" expression="a*a"/>
+                <for variable="b" start="1" end="m" direction="inc" step="1">
+                    <assign variable="w" expression="b*b"/>
+                    <if expression="m ==(q+w)">
+                        <then>
+                            <output expression="a&amp;&quot;^2&quot;&amp;&quot;+&quot;&amp;b&amp;&quot;^2&quot;&amp;&quot;=&quot;&amp;m" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

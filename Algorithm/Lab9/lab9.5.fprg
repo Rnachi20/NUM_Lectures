@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-14 01:49:23 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTQ7MDE6MjA6NDcgUE07Mjg2NQ=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTQ7MDE6MjM6MDcgUE07MTt0dXVndTtERVNLVE9QLTc5TUhOQjY7MjAyMi0xMS0xNDswNzozNzoxMCBBTTs1LmZwcmc7NjQ5Mg=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTQ7MDE6MzU6NDEgUE07MjtVcmFuYTtERVNLVE9QLUFHUUk2TlY7MjAyMi0xMS0wNzswMToyMDoxMCBQTTtsYWI5LjEuZnByZzs2ODgx"/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTQ7MDE6NDk6MjMgUE07MjsyOTc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, m, k, i, j, l, d, x, y, e, q, w, test" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="m"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="b" type="Integer" array="True" size="m"/>
+            <declare name="c" type="Integer" array="True" size="n+m"/>
+            <assign variable="k" expression="0"/>
+            <assign variable="l" expression="0"/>
+            <assign variable="j" expression="0"/>
+            <assign variable="test" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random(1000)"/>
+            </for>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <for variable="d" start="0" end="n-2" direction="inc" step="1">
+                    <assign variable="x" expression="a[d]"/>
+                    <assign variable="y" expression="a[d+1]"/>
+                    <if expression="x &gt; y">
+                        <then>
+                            <assign variable="a[d]" expression="y"/>
+                            <assign variable="a[d+1]" expression="x"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                <assign variable="b[i]" expression="random(1000)"/>
+            </for>
+            <for variable="i" start="0" end="m-2" direction="inc" step="1">
+                <for variable="e" start="0" end="m-2" direction="inc" step="1">
+                    <assign variable="q" expression="b[e]"/>
+                    <assign variable="w" expression="b[e+1]"/>
+                    <if expression="q &gt; w">
+                        <then>
+                            <assign variable="b[e]" expression="w"/>
+                            <assign variable="b[e+1]" expression="q"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <while expression="k!=n &amp;&amp; l!=m">
+                <if expression="a[k] &gt; b[l]">
+                    <then>
+                        <assign variable="c[j]" expression="b[l]"/>
+                        <assign variable="l" expression="l+1"/>
+                    </then>
+                    <else>
+                        <assign variable="c[j]" expression="a[k]"/>
+                        <assign variable="k" expression="k+1"/>
+                    </else>
+                </if>
+                <if expression="k==n">
+                    <then>
+                        <assign variable="test" expression="0"/>
+                        <output expression="&quot;a duussan&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="l == m">
+                    <then>
+                        <assign variable="test" expression="1"/>
+                        <output expression="&quot;b duussan&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="j" expression="j+1"/>
+            </while>
+            <if expression="test==0">
+                <then>
+                    <for variable="i" start="j" end="n+m-1" direction="inc" step="1">
+                        <assign variable="c[i]" expression="b[l]"/>
+                        <assign variable="l" expression="l+1"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="j" end="n+m-1" direction="inc" step="1">
+                        <assign variable="c[i]" expression="a[k]"/>
+                        <assign variable="k" expression="k+1"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

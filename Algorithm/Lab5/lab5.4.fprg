@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 07:29:46 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDE6Mjc6MDggUE07Mjg2Ng=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDQ7MDc6Mjk6NDYgUE07OTsyOTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, n, m, i, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;n oruulna uu&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;m oruulna uu&quot;" newline="True"/>
+            <input variable="m"/>
+            <if expression="m&lt;n">
+                <then>
+                    <assign variable="a" expression="0"/>
+                    <assign variable="b" expression="0"/>
+                    <assign variable="c" expression="0"/>
+                    <assign variable="d" expression="0"/>
+                    <while expression="m&gt;0">
+                        <assign variable="a" expression="m%10"/>
+                        <assign variable="b" expression="b+a"/>
+                        <assign variable="m" expression="m/10"/>
+                    </while>
+                    <for variable="j" start="1" end="n" direction="inc" step="1">
+                        <assign variable="i" expression="j"/>
+                        <while expression="i&gt;0">
+                            <assign variable="c" expression="i%10"/>
+                            <assign variable="d" expression="d+c"/>
+                            <assign variable="i" expression="i/10"/>
+                        </while>
+                        <if expression="b==d">
+                            <then>
+                                <output expression="j" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="d" expression="0"/>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;&#1058;&#1086;&#1086;&#1094;&#1086;&#1086;&#1083;&#1086;&#1093; &#1073;&#1086;&#1083;&#1086;&#1084;&#1078;&#1075;&#1199;&#1081;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

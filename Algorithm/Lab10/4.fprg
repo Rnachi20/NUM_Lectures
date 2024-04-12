@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-14 11:49:47 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wMy0zMTsxMDo0MzozMyBBTTszMDky"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wMy0zMTsxMDo0MzozNiBBTTsxO3N0dWRlbnQ7REVTS1RPUC1JSUQxOU1ROzIwMjItMDMtMzE7MTA6Mzc6NTIgQU07OC42LmZwcmc7NzA1MA=="/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDQtMDE7MDU6MDk6MTQgUE07MzsyNTM1"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0xNDsxMTo0OTo0NyBBTTs3OzMyMjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, x, n, j, m, k" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="m"/>
+            <input variable="k"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="b" type="Integer" array="True" size="m"/>
+            <declare name="c" type="Integer" array="True" size="k"/>
+            <declare name="bruh" type="Integer" array="True" size="100"/>
+            <for variable="i" start="0" end="99" direction="inc" step="1">
+                <assign variable="bruh [i]" expression="0"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random (100)"/>
+                <assign variable="bruh[ a[i] ]" expression="1"/>
+            </for>
+            <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                <assign variable="b[i]" expression="random (100)"/>
+                <if expression="bruh[ b[i] ] == 1">
+                    <then>
+                        <assign variable="bruh[ b[i] ]" expression="2"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="k-1" direction="inc" step="1">
+                <assign variable="c[i]" expression="random (100)"/>
+                <if expression="bruh[ c[i] ] == 2">
+                    <then>
+                        <assign variable="bruh[ c[i] ]" expression="bruh[ c[i] ] + 1"/>
+                        <if expression="bruh[ c[i] ] == 3">
+                            <then>
+                                <output expression="c[i]" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

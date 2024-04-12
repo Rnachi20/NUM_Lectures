@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-09 06:22:44 PM"/>
+        <attribute name="created" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDU6NTQ6MzIgUE07MjQzNA=="/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDU6NTQ6NDcgUE07MTtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjI5OjAzIEFNOzkuZnByZzs2Mjkz"/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDY6MDM6MzYgUE07MTtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjQzOjMzIEFNOzguZnByZzs2Mjg0"/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDY6MjI6NDQgUE07MjsyNTQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, s, n, k, b, j, x" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random ( 100 ) - random( 100 )"/>
+            </for>
+            <for variable="i" start="1" end="n - 1" direction="inc" step="1">
+                <if expression="a[i] &lt; 0">
+                    <then>
+                        <if expression="i == 0">
+                            <then/>
+                            <else>
+                                <assign variable="j" expression="i"/>
+                                <while expression="j &gt; 1 &amp;&amp; a[j-1] &gt; 0">
+                                    <assign variable="x" expression="a[j]"/>
+                                    <assign variable="a[j]" expression="a[j - 1]"/>
+                                    <assign variable="a[j-1]" expression="x"/>
+                                    <assign variable="j" expression="j - 1"/>
+                                </while>
+                                <if expression="a[0] &gt; 0 &amp;&amp; a[1] &lt; 0">
+                                    <then>
+                                        <assign variable="x" expression="a[j]"/>
+                                        <assign variable="a[j]" expression="a[j - 1]"/>
+                                        <assign variable="a[j-1]" expression="x"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

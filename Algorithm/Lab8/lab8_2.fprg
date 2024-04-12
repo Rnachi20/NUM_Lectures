@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-13 11:17:52 AM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTM7MTA6MjM6MjYgQU07Mjg0OQ=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTM7MTE6MDA6NTYgQU07MjtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjQzOjMzIEFNOzMuZnByZzs2Njk1"/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMTM7MTE6MTc6NTIgQU07MTsyOTYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, lo, hi, mid, b" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="b"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="mid" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="a[mid]" expression="random (1000)"/>
+            </for>
+            <for variable="mid" start="0" end="n-2" direction="inc" step="1">
+                <for variable="hi" start="0" end="n-2" direction="inc" step="1">
+                    <if expression="a[hi+1] &lt; a[hi]">
+                        <then>
+                            <assign variable="lo" expression="a[hi+1]"/>
+                            <assign variable="a[hi+1]" expression="a[hi]"/>
+                            <assign variable="a[hi]" expression="lo"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="lo" expression="0"/>
+            <assign variable="hi" expression="n - 1"/>
+            <while expression="hi - lo &gt; 1">
+                <assign variable="mid" expression="(lo + hi) / 2"/>
+                <if expression="a[ mid ] &gt; b">
+                    <then>
+                        <assign variable="hi" expression="mid"/>
+                    </then>
+                    <else>
+                        <assign variable="lo" expression="mid"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="b - a[lo] &gt; a[hi] - b">
+                <then>
+                    <output expression="a[hi]" newline="True"/>
+                </then>
+                <else>
+                    <output expression="a[lo]" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

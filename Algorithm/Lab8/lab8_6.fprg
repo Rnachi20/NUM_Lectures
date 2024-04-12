@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-31 02:35:06 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDI6MTM6NDUgUE07Mjg2NA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDI6MzQ6MjkgUE07MTtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjM3OjUyIEFNOzguNi5mcHJnOzY4MjQ="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDI6MzU6MDYgUE07MTsyOTcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, surug, eyreg, n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <assign variable="surug" expression="0"/>
+            <assign variable="eyreg" expression="0"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <input variable="a[i]"/>
+                <if expression="a[i] &lt; 0">
+                    <then>
+                        <assign variable="surug" expression="surug + 1"/>
+                    </then>
+                    <else>
+                        <if expression="a[i] &gt; 0">
+                            <then>
+                                <assign variable="eyreg" expression="eyreg + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;eyreg: &quot; &amp; eyreg" newline="True"/>
+            <output expression="&quot;surug: &quot; &amp; surug" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

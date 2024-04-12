@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 01:20:06 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDI6MzY6MTUgUE07Mjg2Ng=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMzE7MDI6Mzk6MzAgUE07MTtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjQzOjMzIEFNOzguNy5mcHJnOzY4MTg="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMDc7MDE6MDM6NDAgUE07MztEZWxsO1NPTFZFUkVJR047MjAyMi0wNC0wMTswNjoxOTo0NSBQTTs4LjcuQnMuYi5mcHJnOzY1MjU="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMDc7MDE6MjA6MDYgUE07NDsyOTcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, x, n, j, max" type="Integer" array="False" size=""/>
+            <output expression="&quot;elementiin too&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <output expression="&quot;random(n) tomyogoor oruulna. n too:&quot;" newline="True"/>
+            <input variable="max"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random (max)"/>
+            </for>
+            <declare name="b" type="Integer" array="True" size="max"/>
+            <for variable="i" start="0" end="max - 1" direction="inc" step="1">
+                <assign variable="b[i]" expression="0"/>
+            </for>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="b[ a[i] ]" expression="b[ a[i] ] + 1"/>
+                <if expression="b[ a[i] ] == 2">
+                    <then>
+                        <output expression="a[i]" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

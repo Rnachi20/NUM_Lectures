@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-12 01:17:38 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMTI7MTI6NTI6MzcgUE07Mjg3Ng=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMTI7MDE6MTc6MzggUE07MzsyOTg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Real" array="False" size=""/>
+            <declare name="operator" type="String" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="operator"/>
+            <if expression="operator=&quot;+&quot;">
+                <then>
+                    <assign variable="a" expression="a+b"/>
+                </then>
+                <else>
+                    <if expression="operator=&quot;*&quot;">
+                        <then>
+                            <assign variable="a" expression="a*b"/>
+                        </then>
+                        <else>
+                            <if expression="operator=&quot;-&quot;">
+                                <then>
+                                    <if expression="a&gt;b">
+                                        <then>
+                                            <assign variable="a" expression="a-b"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="a" expression="b-a"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="operator=&quot;/&quot;">
+                                        <then>
+                                            <if expression="a&gt;b">
+                                                <then>
+                                                    <assign variable="a" expression="a/b"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="a" expression="b/a"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Zuvhun +,-,*,/&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

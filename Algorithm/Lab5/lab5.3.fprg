@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-03 01:27:03 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDE6MjI6MTggUE07Mjg2Mg=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMDM7MDE6Mjc6MDMgUE07MTsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, n" type="Integer" array="False" size=""/>
+            <for variable="n" start="1000" end="9999" direction="inc" step="1">
+                <assign variable="a" expression="n%10"/>
+                <assign variable="b" expression="n/10%10"/>
+                <assign variable="c" expression="n/100%10"/>
+                <assign variable="d" expression="n/1000"/>
+                <if expression="(a+b)==(c+d)">
+                    <then>
+                        <output expression="n" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

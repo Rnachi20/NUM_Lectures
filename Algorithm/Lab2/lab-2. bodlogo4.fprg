@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-12 01:32:45 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMTI7MDE6MjI6MTggUE07Mjg3MA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMTI7MDE6MzI6NDUgUE07MjsyOTgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, S, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="S" expression="1"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=n">
+                <assign variable="S" expression="S*i"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="S" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

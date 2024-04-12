@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-09 06:01:28 PM"/>
+        <attribute name="created" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDU6NTQ6MzIgUE07MjQzNA=="/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDU6NTQ6NDcgUE07MTtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTAzLTMxOzEwOjI5OjAzIEFNOzkuZnByZzs2Mjkz"/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDY6MDE6MjggUE07MTsyNTQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, s, n, k, b, j" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random ( 100 )"/>
+            </for>
+            <input variable="b"/>
+            <for variable="i" start="0" end="n - 2" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n - 1" direction="inc" step="1">
+                    <if expression="a[i] + a[j] == b">
+                        <then>
+                            <assign variable="s" expression="s + 1"/>
+                            <output expression="i &amp; &quot; ba &quot; &amp; j &amp; &quot; dugaartai gishuud, &quot; &amp; a[i] &amp; &quot; ba &quot; &amp; a[j]" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <if expression="s == 0">
+                <then>
+                    <output expression="&quot;alga daa&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

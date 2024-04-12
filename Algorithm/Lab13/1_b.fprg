@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 10:41:46 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMDozNToyMyBBTTszMDk1"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMDo0MTo0NiBBTTsxOzMyMDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, j, k, s" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="s" expression="s + funct(i)"/>
+            </for>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+    <function name="funct" type="Integer" variable="bruh">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="bruh, j" type="Integer" array="False" size=""/>
+            <assign variable="bruh" expression="1"/>
+            <for variable="j" start="a" end="a+a" direction="inc" step="1">
+                <assign variable="bruh" expression="bruh * j"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

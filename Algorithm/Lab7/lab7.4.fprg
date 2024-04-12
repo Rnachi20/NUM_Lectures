@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-24 01:12:30 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTc7MDE6NTM6MTUgUE07Mjg2OA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMjM7MDk6MTA6MTYgUE07MjtERUxMO0RFU0tUT1AtUkJCODlOSTsyMDIyLTAzLTMwOzEwOjIwOjU2IFBNOzctNC5mcHJnOzYzNDM="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMjQ7MDE6MTI6MzAgUE07MzsyOTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, p, i, l, m, a" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="p" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="m" expression="0"/>
+                <for variable="l" start="1" end="i" direction="inc" step="1">
+                    <if expression="i%l==0">
+                        <then>
+                            <assign variable="m" expression="m+l"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="p&lt;m">
+                    <then>
+                        <assign variable="p" expression="m"/>
+                        <assign variable="a" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

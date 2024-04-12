@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 11:12:43 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMDo1ODowMSBBTTszMDk2"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMToxMjo0MyBBTTsxOzMyMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, j, k, min, howmany" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="a[i]" expression="hasalt(n, i)"/>
+            </for>
+            <assign variable="min" expression="Min(a)"/>
+            <output expression="min" newline="True"/>
+        </body>
+    </function>
+    <function name="hasalt" type="Integer" variable="b">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="b, k" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="1"/>
+            <assign variable="b" expression="0"/>
+            <while expression="a &gt; 0">
+                <if expression="a%10 == i">
+                    <then/>
+                    <else>
+                        <assign variable="b" expression="b + k * (a%10)"/>
+                        <assign variable="k" expression="k * 10"/>
+                    </else>
+                </if>
+                <assign variable="a" expression="a/10"/>
+            </while>
+        </body>
+    </function>
+    <function name="MIN" type="Integer" variable="k">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="max, k, i" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="a[0]"/>
+            <for variable="i" start="1" end="9" direction="inc" step="1">
+                <if expression="a[i] &lt; k">
+                    <then>
+                        <assign variable="k" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 02:28:23 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTA7MTI6NTQ6NDMgUE07Mjg2NQ=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTA7MDI6Mjg6MjMgUE07NDsyOTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, k, a, b, m" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <if expression="n&gt;=100">
+                <then>
+                    <if expression="n&lt;=999">
+                        <then>
+                            <assign variable="k" expression="0"/>
+                            <while expression="n&gt;0">
+                                <assign variable="a" expression="0"/>
+                                <assign variable="b" expression="0"/>
+                                <assign variable="m" expression="n"/>
+                                <while expression="m&gt;0">
+                                    <assign variable="a" expression="m%10"/>
+                                    <assign variable="b" expression="b+a"/>
+                                    <assign variable="m" expression="m/10"/>
+                                </while>
+                                <assign variable="n" expression="n-b"/>
+                                <assign variable="k" expression="k+1"/>
+                            </while>
+                            <output expression="k" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#1058;&#1072;&#1085;&#1099; &#1257;&#1075;&#1257;&#1075;&#1076;&#1257;&#1083; &#1073;&#1091;&#1088;&#1091;&#1091; &#1073;&#1072;&#1081;&#1085;&#1072;!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;&#1058;&#1072;&#1085;&#1099; &#1257;&#1075;&#1257;&#1075;&#1076;&#1257;&#1083; &#1073;&#1091;&#1088;&#1091;&#1091; &#1073;&#1072;&#1081;&#1085;&#1072;!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

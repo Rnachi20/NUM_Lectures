@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-28 10:20:09 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yODsxMDoxNzozMCBBTTszMDk3"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yODsxMDoyMDowOSBBTTsxOzMyMDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, max" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="max" expression="ih(a, b)"/>
+            <assign variable="max" expression="ih(max, c)"/>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+    <function name="ih" type="Integer" variable="ara">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="j" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ara" type="Integer" array="False" size=""/>
+            <if expression="i &gt; j">
+                <then>
+                    <assign variable="ara" expression="i"/>
+                </then>
+                <else>
+                    <assign variable="ara" expression="j"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

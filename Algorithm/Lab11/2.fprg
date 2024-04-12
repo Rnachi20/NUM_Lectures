@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-21 11:02:43 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yMTsxMDo1NjoyMiBBTTszMDk0"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yMTsxMTowMjo0MyBBTTsxOzMxOTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str" type="String" array="False" size=""/>
+            <declare name="i, s" type="Integer" array="False" size=""/>
+            <input variable="str"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="len(str) - 1" direction="inc" step="1">
+                <if expression="char( str, i) == &quot;a&quot; or&#13;&#10;char( str, i) == &quot;e&quot; or&#13;&#10;char( str, i) == &quot;i&quot; or&#13;&#10;char( str, i) == &quot;o&quot; or&#13;&#10;char( str, i) == &quot;u&quot; or&#13;&#10;char( str, i) == &quot;y&quot; or&#13;&#10;char( str, i) == &quot;A&quot; or&#13;&#10;char( str, i) == &quot;E&quot; or&#13;&#10;char( str, i) == &quot;I&quot; or&#13;&#10;char( str, i) == &quot;O&quot; or&#13;&#10;char( str, i) == &quot;U&quot; or&#13;&#10;char( str, i) == &quot;Y&quot;">
+                    <then>
+                        <assign variable="s" expression="s + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

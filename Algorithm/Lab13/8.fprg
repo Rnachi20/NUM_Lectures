@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 12:28:46 PM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wMy0zMTsxMDo0MzozMyBBTTszMDky"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wMy0zMTsxMDo0MzozNiBBTTsxO3N0dWRlbnQ7REVTS1RPUC1JSUQxOU1ROzIwMjItMDMtMzE7MTA6Mzc6NTIgQU07OC42LmZwcmc7NzA1MA=="/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDQtMDE7MDU6MDk6MTQgUE07MzsyNTM1"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0xNDsxMjowNTowMyBQTTsxO3N0dWRlbnQ7REVTS1RPUC1JSUQxOU1ROzIwMjItMDMtMzE7MTA6NDM6MzMgQU07MS5mcHJnOzY5NTA="/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMjoyODo0NiBQTTsxNDszMjc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, x, n, j, m, k" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a, b" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+                <assign variable="b[i]" expression="a[i]"/>
+            </for>
+            <assign variable="k" expression="0"/>
+            <for variable="i" start="0" end="n -2" direction="inc" step="1">
+                <for variable="j" start="0" end="n-2-i" direction="inc" step="1">
+                    <if expression="a[j+1] &lt; a[j]">
+                        <then>
+                            <assign variable="x" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="a[j]"/>
+                            <assign variable="a[j]" expression="x"/>
+                            <assign variable="k" expression="k + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="m" expression="0"/>
+            <for variable="i" start="0" end="n -2" direction="inc" step="1">
+                <for variable="j" start="0" end="n-2-i" direction="inc" step="1">
+                    <if expression="b[j+1] &gt; b[j]">
+                        <then>
+                            <assign variable="x" expression="b[j+1]"/>
+                            <assign variable="b[j+1]" expression="b[j]"/>
+                            <assign variable="b[j]" expression="x"/>
+                            <assign variable="m" expression="m + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <if expression="k == 0">
+                <then>
+                    <if expression="m == 0">
+                        <then>
+                            <output expression="&quot;adilhan temdegtees burdsen&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;usuh daraallaar erembelegdsen&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="m == 0">
+                        <then>
+                            <output expression="&quot;buurah daraallaar erembelegdsen&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;erembelegdeegui&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

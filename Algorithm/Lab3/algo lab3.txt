@@ -1,0 +1,108 @@
+a<c1.
+
+input (a)
+input (b)
+input (c)
+a=(a+b+c)/3
+output a
+
+2.
+
+input a
+input b
+input c
+
+if a<b then 
+    if b<c then 
+        print c 
+        print b
+        print a
+    else 
+        if a<c then 
+            print b
+            print c
+            print a
+        else 
+            print b
+            print a
+            print c
+        end if
+    end if
+else 
+    if a<c then 
+        print c
+        print a
+        print b
+    else
+        if b<c then 
+            print a
+            print c
+            print b
+        else 
+            print a
+            print b
+            print c
+        end if
+    end if
+end if
+
+3.
+
+input a
+if a<70 then 
+    if a>59 then
+        print "D"
+    else 
+        if a<0 then
+            print "Invalid value"
+        else 
+            print "F"
+        end if
+    end if
+else
+    if a<80 then
+        print "C"
+    else
+        if a<90 then
+                print "B"
+        else 
+            if a<100 then
+                print "A"
+            else
+                print "Invalid value"
+            end if
+        end if
+    end if
+end if
+
+4.
+input n
+if n>=0
+    i=0
+    while i<=n
+        if n%2==0
+            output n
+            n=n-2
+        else
+            output "Invalid"
+            n=n-1
+        end if
+    end while
+else
+    output "Invalid"
+end if
+
+
+5.
+
+input n
+k=0
+m=0
+while n>0
+    k=n%10
+    if k%2==1
+        m=m+k
+    end if
+    n=n/10
+end while
+output m

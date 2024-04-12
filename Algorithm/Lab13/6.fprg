@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 12:12:36 PM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMDoxMDo1MSBBTTszMDg5"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMjoxMjozNiBQTTszOzMyMjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, surug, fact, m, j" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="n" direction="inc" step="1">
+                <for variable="j" start="0" end="i" direction="inc" step="1">
+                    <output expression="heseglel(i,j) &amp; &quot; &quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="fact" type="Integer" variable="hah">
+        <parameters>
+            <parameter name="f" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="m, hah" type="Integer" array="False" size=""/>
+            <if expression="f == 1">
+                <then>
+                    <assign variable="hah" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="hah" expression="fact(f-1)"/>
+                    <assign variable="hah" expression="hah * f"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="heseglel" type="Integer" variable="bruh">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="m" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="bruh" type="Integer" array="False" size=""/>
+            <if expression="m == n || m == 0">
+                <then>
+                    <assign variable="bruh" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="bruh" expression="fact(n) / ( fact(m) * fact(n-m) )"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

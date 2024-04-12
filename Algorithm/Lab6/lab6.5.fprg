@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 02:23:37 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTA7MDI6MTU6MTMgUE07Mjg1OA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTA7MDI6MjM6MzcgUE07MTsyOTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, m, k, l" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="k" expression="0"/>
+            <assign variable="m" expression="0"/>
+            <assign variable="l" expression="n"/>
+            <while expression="l&gt;0">
+                <assign variable="k" expression="l%10"/>
+                <assign variable="m" expression="m+k*k*k"/>
+                <assign variable="l" expression="l/10"/>
+            </while>
+            <if expression="n==m">
+                <then>
+                    <output expression="&quot;&#1040;&#1088;&#1084;&#1089;&#1090;&#1088;&#1086;&#1085;&#1075; &#1090;&#1086;&#1086;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#1040;&#1088;&#1084;&#1089;&#1090;&#1088;&#1086;&#1085;&#1075; &#1090;&#1086;&#1086; &#1073;&#1080;&#1096;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-28 08:21:22 AM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMjY7MDc6Mjk6MjIgUE07Mjg4Mw=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMDktMjg7MDg6MjE6MjIgQU07MzsyOTcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, k, s, j" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="s" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <while expression="n&gt;0">
+                <if expression="i%2==0">
+                    <then>
+                        <assign variable="k" expression="-1"/>
+                    </then>
+                    <else>
+                        <assign variable="k" expression="1"/>
+                    </else>
+                </if>
+                <assign variable="j" expression="k*i/(i+1)"/>
+                <assign variable="s" expression="s+j"/>
+                <assign variable="i" expression="i+1"/>
+                <assign variable="n" expression="n-1"/>
+            </while>
+            <output expression="&quot;&#1053;&#1080;&#1081;&#1083;&#1073;&#1101;&#1088;:&quot;&amp;s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

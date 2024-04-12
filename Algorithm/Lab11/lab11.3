@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-21 02:19:32 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMjE7MDI6MDA6NDUgUE07Mjg2MA=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMjE7MDI6MDY6MDcgUE07MjtzdHVkZW50O0RFU0tUT1AtSUlEMTlNUTsyMDIyLTA0LTI4OzEwOjIwOjQyIEFNO2xhYjExLjIuZnByZzs3MTU5"/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMjE7MDI6MTk6MzIgUE07MjsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, l" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random(30)"/>
+            </for>
+            <for variable="l" start="2" end="n-1" direction="inc" step="1">
+                <if expression="tugs(a[l]) == true">
+                    <then>
+                        <output expression="a[l]" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="tugs" type="Boolean" variable="check">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="s, j" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="1"/>
+            <declare name="check" type="Boolean" array="False" size=""/>
+            <for variable="j" start="2" end="a/2" direction="inc" step="1">
+                <if expression="a % j == 0">
+                    <then>
+                        <assign variable="s" expression="s + j"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="a == s">
+                <then>
+                    <assign variable="check" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="check" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

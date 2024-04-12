@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-21 01:20:27 PM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yMTsxMDo1NjoyMiBBTTszMDk0"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0yMTsxMToxODo0MCBBTTszOzMyMDM="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMjE7MDE6MjA6MjcgUE07MTsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str, sea" type="String" array="False" size=""/>
+            <declare name="i, s, a, j, k" type="Integer" array="False" size=""/>
+            <input variable="str"/>
+            <input variable="sea"/>
+            <assign variable="a" expression="len(sea)"/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="len(str) - a" direction="inc" step="1">
+                <assign variable="k" expression="0"/>
+                <for variable="j" start="0" end="a - 1" direction="inc" step="1">
+                    <if expression="char(str, i + j) == char(sea, j)">
+                        <then>
+                            <assign variable="k" expression="k + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="k == a">
+                    <then>
+                        <assign variable="s" expression="s + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

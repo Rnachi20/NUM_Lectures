@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 01:59:23 PM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wMy0zMTsxMDo0MzozMyBBTTszMDky"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wMy0zMTsxMDo0MzozNiBBTTsxO3N0dWRlbnQ7REVTS1RPUC1JSUQxOU1ROzIwMjItMDMtMzE7MTA6Mzc6NTIgQU07OC42LmZwcmc7NzA1MA=="/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDQtMDE7MDU6MDk6MTQgUE07MzsyNTM1"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNC0wNzsxMDozMTozMiBBTTs0OzMyMDM="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTEtMDc7MDE6NTk6MjMgUE07MTsyOTgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, x, b, n, j" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random (1000)"/>
+            </for>
+            <for variable="i" start="1" end="n-2" direction="inc" step="1">
+                <if expression="a[i-1] &lt;= a[i] &amp;&amp; a[i] &lt;= a[i+1]">
+                    <then>
+                        <output expression="&quot;a[&quot; &amp; i &amp; &quot;] &quot; &amp; a[i]" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

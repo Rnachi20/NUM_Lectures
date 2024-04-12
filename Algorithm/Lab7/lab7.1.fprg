@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Urana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-24 12:52:10 PM"/>
+        <attribute name="created" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMTc7MTI6NTk6MDEgUE07Mjg3MQ=="/>
+        <attribute name="edited" value="VXJhbmE7REVTS1RPUC1BR1FJNk5WOzIwMjItMTAtMjQ7MTI6NTI6MTAgUE07MzsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, m, k, l" type="Integer" array="False" size=""/>
+            <output expression="&quot;N toog oruulna uu&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="l" start="1" end="n" direction="inc" step="1">
+                <assign variable="k" expression="0"/>
+                <assign variable="m" expression="0"/>
+                <assign variable="i" expression="l"/>
+                <while expression="i&gt;0">
+                    <assign variable="k" expression="i%10"/>
+                    <assign variable="m" expression="m+k"/>
+                    <assign variable="i" expression="i/10"/>
+                </while>
+                <if expression="l%m==0">
+                    <then>
+                        <output expression="l" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

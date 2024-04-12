@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-09 07:33:20 PM"/>
+        <attribute name="created" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDY6MjM6MTQgUE07MjQzMQ=="/>
+        <attribute name="edited" value="RGVsbDtTT0xWRVJFSUdOOzIwMjItMDUtMDk7MDc6MzM6MjAgUE07MjsyNTM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="min, max, temp, text" type="String" array="False" size=""/>
+            <declare name="count, a, i, j" type="Integer" array="False" size=""/>
+            <input variable="text"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="len(text) - 1" direction="inc" step="1">
+                <if expression="char( text, i ) == &quot; &quot;">
+                    <then>
+                        <assign variable="count" expression="count + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="char(text, len(text) - 1 ) == &quot; &quot;">
+                <then/>
+                <else>
+                    <assign variable="text" expression="text &amp; &quot; &quot;"/>
+                </else>
+            </if>
+            <if expression="count == 0">
+                <then>
+                    <output expression="&quot;neg ug baina shuu dee&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="temp" expression="&quot;&quot;"/>
+                    <assign variable="max" expression="&quot;&quot;"/>
+                    <assign variable="min" expression="text"/>
+                    <for variable="i" start="0" end="len(text) - 1" direction="inc" step="1">
+                        <if expression="char(text, i) == &quot; &quot;">
+                            <then>
+                                <if expression="len(max) &lt; len(temp)">
+                                    <then>
+                                        <assign variable="max" expression="temp"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <if expression="len(min) &gt; len(temp)">
+                                    <then>
+                                        <assign variable="min" expression="temp"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <assign variable="temp" expression="&quot;&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="temp" expression="temp &amp; char(text, i)"/>
+                            </else>
+                        </if>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;max: &quot; &amp; max" newline="True"/>
+            <output expression="&quot;min: &quot; &amp; min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

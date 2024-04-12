@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-05 10:48:47 AM"/>
+        <attribute name="created" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMDoxMDo1MSBBTTszMDg5"/>
+        <attribute name="edited" value="c3R1ZGVudDtERVNLVE9QLUlJRDE5TVE7MjAyMi0wNS0wNTsxMDo0ODo0NyBBTTsyOzMyMTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, surug, fact, m" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <assign variable="m" expression="1"/>
+            <while expression="n &lt; m">
+                <output expression="&quot;n too m togooos ih baih heregtei&quot;" newline="True"/>
+                <input variable="n"/>
+                <input variable="m"/>
+            </while>
+            <declare name="s" type="Real" array="False" size=""/>
+            <if expression="m = n">
+                <then>
+                    <assign variable="s" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="s" expression="fact(n) / ( fact(m) * fact(n-m) )"/>
+                </else>
+            </if>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+    <function name="fact" type="Integer" variable="hah">
+        <parameters>
+            <parameter name="f" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="m, hah" type="Integer" array="False" size=""/>
+            <if expression="f == 1">
+                <then>
+                    <assign variable="hah" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="hah" expression="fact(f-1)"/>
+                    <assign variable="hah" expression="hah * f"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
